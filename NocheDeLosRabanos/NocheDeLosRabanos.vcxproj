@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32"><Configuration>Debug</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32"><Configuration>Release</Configuration><Platform>Win32</Platform></ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{C46F7B82-29D9-4C16-A2ED-878D9962D811}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>NocheDeLosRabanos</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseDebugLibraries Condition="'$(Configuration)'=='Debug'">true</UseDebugLibraries>
+    <UseDebugLibraries Condition="'$(Configuration)'=='Release'">false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup>
+    <OutDir>$(MSBuildProjectDirectory)\..\build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(MSBuildProjectDirectory)\..\build\obj\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName>NocheDeLosRabanos</TargetName>
+    <LocalDebuggerWorkingDirectory>$(OutDir)</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
+      <PreprocessorDefinitions>WIN32;_CONSOLE;GLFW_DLL;GLFW_INCLUDE_NONE;NOMINMAX;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)..\External Libraries;$(ProjectDir)..\External Libraries\GLEW\include;$(ProjectDir)..\External Libraries\GLFW\include;$(ProjectDir)..\External Libraries\glm;$(ProjectDir)..\External Libraries\assimp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)..\External Libraries\GLEW\lib\Release\Win32;$(ProjectDir)..\External Libraries\GLFW\lib-vc2015;$(ProjectDir)..\External Libraries\assimp\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;gdi32.lib;user32.lib;glew32.lib;glfw3dll.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'">
+    <ClCompile><Optimization>Disabled</Optimization><RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary><PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions></ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
+    <ClCompile><Optimization>MaxSpeed</Optimization><RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary><PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions></ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Render.cpp" />
+    <ClCompile Include="Escenario.cpp" />
+    <ClCompile Include="Colisiones.cpp" />
+    <ClCompile Include="Interaccion.cpp" />
+    <ClCompile Include="Interfaz.cpp" />
+    <ClInclude Include="Render.h" />
+    <ClInclude Include="Escenario.h" />
+    <ClInclude Include="Colisiones.h" />
+    <ClInclude Include="Interaccion.h" />
+    <ClInclude Include="Interfaz.h" />
+    <ClCompile Include="..\External Libraries\SOIL2\SOIL2.c"><WarningLevel>TurnOffAllWarnings</WarningLevel></ClCompile>
+    <ClCompile Include="..\External Libraries\SOIL2\image_DXT.c"><WarningLevel>TurnOffAllWarnings</WarningLevel></ClCompile>
+    <ClCompile Include="..\External Libraries\SOIL2\image_helper.c"><WarningLevel>TurnOffAllWarnings</WarningLevel></ClCompile>
+    <ClCompile Include="..\External Libraries\SOIL2\etc1_utils.c"><WarningLevel>TurnOffAllWarnings</WarningLevel></ClCompile>
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Model.h" />
+    <None Include="Shader\scene.vert" />
+    <None Include="Shader\scene.frag" />
+    <None Include="Shader\modelLoading.vs" />
+    <None Include="Shader\modelLoading.frag" />
+    <None Include="..\README.md" />
+    <None Include="Shader\recorrido.vert" /><None Include="Shader\recorrido.frag" /><None Include="Shader\sombra.vert" /><None Include="Shader\sombra.frag" /><None Include="Shader\pantalla.vert" /><None Include="Shader\cielo.frag" /><None Include="Shader\interfaz.frag" />
+  </ItemGroup>
+  <ItemGroup>
+    <RuntimeDll Include="..\External Libraries\GLEW\bin\Release\Win32\glew32.dll" />
+    <RuntimeDll Include="..\External Libraries\GLFW\lib-vc2015\glfw3.dll" />
+    <RuntimeDll Include="..\External Libraries\assimp\lib\assimp-vc140-mt.dll" />
+    <ShaderResource Include="Shader\**\*" />
+    <LocalModel Include="Models\**\*" Exclude="Models\.gitkeep;Models\**\*.blend;Models\**\*.blend1;Models\**\README.md" />
+    <LocalImage Include="images\**\*" Exclude="images\.gitkeep" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Target Name="CopyRuntimeResources" AfterTargets="Build">
+    <Copy SourceFiles="@(RuntimeDll)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(ShaderResource)" DestinationFiles="@(ShaderResource->'$(OutDir)Shader\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(LocalModel)" DestinationFiles="@(LocalModel->'$(OutDir)Models\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(LocalImage)" DestinationFiles="@(LocalImage->'$(OutDir)images\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+  <ItemGroup>
+    <None Include="Models\Proyecto\danza.mtl" />
+    <None Include="Models\Proyecto\danza.obj" />
+    <None Include="Models\Proyecto\flor.mtl" />
+    <None Include="Models\Proyecto\flor.obj" />
+    <None Include="Models\Proyecto\jaguar.mtl" />
+    <None Include="Models\Proyecto\jaguar.obj" />
+    <None Include="Models\Proyecto\mercado.mtl" />
+    <None Include="Models\Proyecto\mercado.obj" />
+    <None Include="Models\Proyecto\Obras_NocheDeLosRabanos.blend" />
+    <None Include="Models\Proyecto\README.md" />
+    <None Include="Models\Proyecto\totomoxtle.mtl" />
+    <None Include="Models\Proyecto\totomoxtle.obj" />
+    <None Include="images\Proyecto\adoquin.png" />
+    <None Include="images\Proyecto\cartel_0.png" />
+    <None Include="images\Proyecto\cartel_1.png" />
+    <None Include="images\Proyecto\cartel_2.png" />
+    <None Include="images\Proyecto\cartel_3.png" />
+    <None Include="images\Proyecto\cartel_4.png" />
+    <None Include="images\Proyecto\cartel_5.png" />
+    <None Include="images\Proyecto\cartel_6.png" />
+    <None Include="images\Proyecto\cartel_7.png" />
+    <None Include="images\Proyecto\cobre.png" />
+    <None Include="images\Proyecto\hojas.png" />
+    <None Include="images\Proyecto\madera.png" />
+    <None Include="images\Proyecto\muro.png" />
+    <None Include="images\Proyecto\piedra.png" />
+    <None Include="images\Proyecto\tela.png" />
+  </ItemGroup>
+  <ItemGroup><None Include="Models\Proyecto\Escenario_NocheDeLosRabanos.blend" /></ItemGroup>
+</Project>
+
+
+
+
+

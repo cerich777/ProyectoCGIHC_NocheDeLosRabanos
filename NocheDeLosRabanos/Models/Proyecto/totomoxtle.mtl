@@ -1,0 +1,26 @@
+# Materiales originales del equipo; generacion reproducible
+newmtl Totomoxtle_0
+Kd 0.52000 0.28000 0.09000
+Ks 0.08 0.08 0.08
+Ns 24
+
+newmtl Totomoxtle_2
+Kd 0.61000 0.36000 0.14000
+Ks 0.08 0.08 0.08
+Ns 24
+
+newmtl Totomoxtle_3
+Kd 0.65500 0.40000 0.16500
+Ks 0.08 0.08 0.08
+Ns 24
+
+newmtl Totomoxtle_1
+Kd 0.56500 0.32000 0.11500
+Ks 0.08 0.08 0.08
+Ns 24
+
+newmtl Totomoxtle_4
+Kd 0.70000 0.44000 0.19000
+Ks 0.08 0.08 0.08
+Ns 24
+

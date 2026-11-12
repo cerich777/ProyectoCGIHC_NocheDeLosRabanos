@@ -1,0 +1,35 @@
+# Visual Studio y resultados de compilacion
+.vs/
+/build/
+/Debug/
+/Release/
+/x64/
+/Win32/
+/entrega/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+*.log
+*.obj
+*.pdb
+*.ilk
+*.tlog/
+
+# Las carpetas de recursos se conservan; su contenido se agrega mas adelante.
+/NocheDeLosRabanos/Models/*
+!/NocheDeLosRabanos/Models/.gitkeep
+/NocheDeLosRabanos/images/*
+!/NocheDeLosRabanos/images/.gitkeep
+
+# Estas DLL/LIB son dependencias necesarias para que compile todo el equipo.
+!/External Libraries/
+!/External Libraries/**
+
+# Recursos originales de este recorrido: se comparten con el equipo.
+!/NocheDeLosRabanos/Models/Proyecto/
+!/NocheDeLosRabanos/Models/Proyecto/**
+!/NocheDeLosRabanos/images/Proyecto/
+!/NocheDeLosRabanos/images/Proyecto/**
+*.blend1
+*.blend2

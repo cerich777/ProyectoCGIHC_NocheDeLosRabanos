@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Archivos de origen">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Archivos de encabezado">
+      <UniqueIdentifier>{93995380-89BD-4B04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Archivos de recursos">
+      <UniqueIdentifier>{67DA6AB6-F800-4C08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Archivos de origen\Shader">
+      <UniqueIdentifier>{84D2F0DA-A8CF-4FA9-B5F4-E18F6AC1D480}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de origen\SOIL2">
+      <UniqueIdentifier>{CD741940-77BD-46B9-8975-69D89FDE8BE6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp"><Filter>Archivos de origen</Filter></ClCompile>
+    <ClCompile Include="..\External Libraries\SOIL2\SOIL2.c"><Filter>Archivos de origen\SOIL2</Filter></ClCompile>
+    <ClCompile Include="..\External Libraries\SOIL2\image_DXT.c"><Filter>Archivos de origen\SOIL2</Filter></ClCompile>
+    <ClCompile Include="..\External Libraries\SOIL2\image_helper.c"><Filter>Archivos de origen\SOIL2</Filter></ClCompile>
+    <ClCompile Include="..\External Libraries\SOIL2\etc1_utils.c"><Filter>Archivos de origen\SOIL2</Filter></ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h"><Filter>Archivos de encabezado</Filter></ClInclude>
+    <ClInclude Include="Shader.h"><Filter>Archivos de encabezado</Filter></ClInclude>
+    <ClInclude Include="Mesh.h"><Filter>Archivos de encabezado</Filter></ClInclude>
+    <ClInclude Include="Model.h"><Filter>Archivos de encabezado</Filter></ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shader\scene.vert"><Filter>Archivos de origen\Shader</Filter></None>
+    <None Include="Shader\scene.frag"><Filter>Archivos de origen\Shader</Filter></None>
+    <None Include="Shader\modelLoading.vs"><Filter>Archivos de origen\Shader</Filter></None>
+    <None Include="Shader\modelLoading.frag"><Filter>Archivos de origen\Shader</Filter></None>
+    <None Include="..\README.md"><Filter>Archivos de recursos</Filter></None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Render.cpp"><Filter>Archivos de origen</Filter></ClCompile>
+    <ClCompile Include="Escenario.cpp"><Filter>Archivos de origen</Filter></ClCompile>
+    <ClCompile Include="Colisiones.cpp"><Filter>Archivos de origen</Filter></ClCompile>
+    <ClCompile Include="Interaccion.cpp"><Filter>Archivos de origen</Filter></ClCompile>
+    <ClCompile Include="Interfaz.cpp"><Filter>Archivos de origen</Filter></ClCompile>
+    <ClInclude Include="Render.h"><Filter>Archivos de encabezado</Filter></ClInclude>
+    <ClInclude Include="Escenario.h"><Filter>Archivos de encabezado</Filter></ClInclude>
+    <ClInclude Include="Colisiones.h"><Filter>Archivos de encabezado</Filter></ClInclude>
+    <ClInclude Include="Interaccion.h"><Filter>Archivos de encabezado</Filter></ClInclude>
+    <ClInclude Include="Interfaz.h"><Filter>Archivos de encabezado</Filter></ClInclude>
+    <None Include="Shader\recorrido.vert"><Filter>Archivos de origen\Shader</Filter></None>
+    <None Include="Shader\recorrido.frag"><Filter>Archivos de origen\Shader</Filter></None>
+    <None Include="Shader\sombra.vert"><Filter>Archivos de origen\Shader</Filter></None>
+    <None Include="Shader\sombra.frag"><Filter>Archivos de origen\Shader</Filter></None>
+    <None Include="Shader\pantalla.vert"><Filter>Archivos de origen\Shader</Filter></None>
+    <None Include="Shader\cielo.frag"><Filter>Archivos de origen\Shader</Filter></None>
+    <None Include="Shader\interfaz.frag"><Filter>Archivos de origen\Shader</Filter></None>
+  </ItemGroup>
+  <ItemGroup><Filter Include="Archivos de recursos\Modelos"><UniqueIdentifier>{0ED7FC6B-8E50-47D8-9C63-C48CB7AC5D5E}</UniqueIdentifier></Filter><Filter Include="Archivos de recursos\Texturas"><UniqueIdentifier>{21E408C9-376D-44C1-8D07-1E188D21177F}</UniqueIdentifier></Filter></ItemGroup>
+  <ItemGroup>
+    <None Include="Models\Proyecto\danza.mtl"><Filter>Archivos de recursos\Modelos</Filter></None>
+    <None Include="Models\Proyecto\danza.obj"><Filter>Archivos de recursos\Modelos</Filter></None>
+    <None Include="Models\Proyecto\flor.mtl"><Filter>Archivos de recursos\Modelos</Filter></None>
+    <None Include="Models\Proyecto\flor.obj"><Filter>Archivos de recursos\Modelos</Filter></None>
+    <None Include="Models\Proyecto\jaguar.mtl"><Filter>Archivos de recursos\Modelos</Filter></None>
+    <None Include="Models\Proyecto\jaguar.obj"><Filter>Archivos de recursos\Modelos</Filter></None>
+    <None Include="Models\Proyecto\mercado.mtl"><Filter>Archivos de recursos\Modelos</Filter></None>
+    <None Include="Models\Proyecto\mercado.obj"><Filter>Archivos de recursos\Modelos</Filter></None>
+    <None Include="Models\Proyecto\Obras_NocheDeLosRabanos.blend"><Filter>Archivos de recursos\Modelos</Filter></None>
+    <None Include="Models\Proyecto\README.md"><Filter>Archivos de recursos\Modelos</Filter></None>
+    <None Include="Models\Proyecto\totomoxtle.mtl"><Filter>Archivos de recursos\Modelos</Filter></None>
+    <None Include="Models\Proyecto\totomoxtle.obj"><Filter>Archivos de recursos\Modelos</Filter></None>
+    <None Include="images\Proyecto\adoquin.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+    <None Include="images\Proyecto\cartel_0.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+    <None Include="images\Proyecto\cartel_1.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+    <None Include="images\Proyecto\cartel_2.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+    <None Include="images\Proyecto\cartel_3.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+    <None Include="images\Proyecto\cartel_4.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+    <None Include="images\Proyecto\cartel_5.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+    <None Include="images\Proyecto\cartel_6.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+    <None Include="images\Proyecto\cartel_7.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+    <None Include="images\Proyecto\cobre.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+    <None Include="images\Proyecto\hojas.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+    <None Include="images\Proyecto\madera.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+    <None Include="images\Proyecto\muro.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+    <None Include="images\Proyecto\piedra.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+    <None Include="images\Proyecto\tela.png"><Filter>Archivos de recursos\Texturas</Filter></None>
+  </ItemGroup>
+  <ItemGroup><None Include="Models\Proyecto\Escenario_NocheDeLosRabanos.blend"><Filter>Archivos de recursos\Modelos</Filter></None></ItemGroup>
+</Project>
+
+
+
